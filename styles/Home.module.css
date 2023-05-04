@@ -1,0 +1,13 @@
+.homeMain {
+  padding: 2rem 10rem 2rem 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.pageSection {
+}
+
+.pageSection > h2 {
+  text-align: center;
+}
