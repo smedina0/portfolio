@@ -1,0 +1,33 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  margin: 1.5rem 0 0.25rem 0;
+  font-weight: 700;
+}
+
+.form input[type='text'] {
+  height: 2rem;
+}
+
+.form textarea {
+  height: 4.75rem;
+  margin-bottom: 1rem;
+}
+
+.form input[type='submit'] {
+  max-width: 25%;
+  height: 2rem;
+  background-color: whitesmoke;
+  border: 3px solid black;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+}
+
+.form input[type='submit']:hover {
+  background-color: black;
+  color: whitesmoke;
+}

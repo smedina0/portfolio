@@ -113,3 +113,17 @@ main {
     color-scheme: dark;
   }
 }
+
+/* Inverted SVG colors for light mode */
+@media (prefers-color-scheme: light) {
+  .invert-svg img {
+    filter: none;
+  }
+}
+
+/* Inverted SVG colors for dark mode */
+@media (prefers-color-scheme: dark) {
+  .invert-svg img {
+    filter: invert(1);
+  }
+}
