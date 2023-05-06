@@ -10,20 +10,31 @@ function Form(props) {
 
   const [formState, setFormState] = useState(getNewState());
 
+  const { name, email, message } = formState;
+
+  const encode = ({ name, email, message }) => {
+    return `form-name=contact&name=${encodeURIComponent(
+      name
+    )}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(
+      message
+    )}`;
+  };
+
   const handleChange = (event) => {
     setFormState({
       ...formState,
       [event.target.name]: event.target.value,
     });
   };
-  const handleSubmit = (event) => {
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState);
-    setFormState(getNewState());
+    await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode(formState),
+    });
   };
-
-  const { name, email, message } = formState;
-
   return (
     <form
       onSubmit={handleSubmit}
