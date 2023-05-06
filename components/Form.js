@@ -25,8 +25,13 @@ function Form(props) {
   const { name, email, message } = formState;
 
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
-        <input type='hidden' name='form-name' value='contact' />
+    <form
+      onSubmit={handleSubmit}
+      className={styles.form}
+      data-netlify='true'
+      name='contact'
+    >
+      <input type='hidden' name='form-name' value='contact' />
       <label htmlFor='name'>Name:</label>
       <input
         id='name'
