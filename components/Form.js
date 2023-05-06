@@ -10,8 +10,6 @@ function Form(props) {
 
   const [formState, setFormState] = useState(getNewState());
 
-  const { name, email, message } = formState;
-
   const encode = ({ name, email, message }) => {
     return `form-name=contact&name=${encodeURIComponent(
       name
@@ -26,15 +24,20 @@ function Form(props) {
       [event.target.name]: event.target.value,
     });
   };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     await fetch('/', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      headers: {
+        'Content-type': 'application/x-www-form-urlencoded',
+      },
       body: encode(formState),
     });
+
+    setFormState(getNewState());
   };
+
+  const { name, email, message } = formState;
   return (
     <form
       onSubmit={handleSubmit}
@@ -65,7 +68,7 @@ function Form(props) {
         name='message'
         onChange={handleChange}
         value={message}
-      />
+      ></textarea>
       <input type='submit' value='Send Message' />
     </form>
   );
