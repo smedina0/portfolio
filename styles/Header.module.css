@@ -23,7 +23,11 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
-  max-width: 65%;
+  max-width: 80%;
+}
+
+.nameAndImage p{
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 768px) {

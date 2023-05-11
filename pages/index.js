@@ -21,13 +21,6 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main className={`${inter.className} ${styles['homeMain']}`}>
-        <h1>Home Page</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
-          veniam quas. Pariatur, sed nulla eaque dicta doloremque magnam
-          laudantium ut, odio iste, quibusdam quo unde ducimus porro totam
-          temporibus quaerat!
-        </p>
         <section
           className={`${styles.pageSection} ${styles.skillsSection} invert-svg`}
         >
